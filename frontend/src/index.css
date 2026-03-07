@@ -9,6 +9,7 @@
 /* Custom Base Styles */
 html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -17,6 +18,25 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-size: 16px;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Prevent horizontal scroll on mobile */
+#root {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 640px) {
+
+    button,
+    a,
+    input,
+    select,
+    textarea {
+        min-height: 44px;
+    }
 }
 
 /* Accessibility: Respect user motion preferences */

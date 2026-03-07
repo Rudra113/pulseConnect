@@ -89,11 +89,11 @@ function LoginPage({ onLogin, onSwitchToRegister }) {
       </div>
 
       {/* Right Side - Login Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white dark:bg-gray-900 transition-colors duration-300 relative">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-4 sm:p-8 bg-white dark:bg-gray-900 transition-colors duration-300 relative min-h-screen lg:min-h-0">
         {/* Dark Mode Toggle */}
         <button
           onClick={toggleTheme}
-          className="absolute top-6 right-6 p-3 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2.5 sm:p-3 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
           aria-label={
             isDarkMode ? "Switch to light mode" : "Switch to dark mode"
           }
@@ -113,21 +113,21 @@ function LoginPage({ onLogin, onSwitchToRegister }) {
             </span>
           </div>
 
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">
             Sign In
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
             Choose your role to continue
           </p>
 
           {/* Role Toggle */}
-          <div className="flex bg-gray-100 dark:bg-gray-800 rounded-xl p-1 mb-8">
+          <div className="flex bg-gray-100 dark:bg-gray-800 rounded-xl p-1 mb-6 sm:mb-8">
             {["patient", "doctor", "admin"].map((r) => (
               <button
                 key={r}
                 type="button"
                 onClick={() => setRole(r)}
-                className={`flex-1 py-3 rounded-lg font-medium transition capitalize ${
+                className={`flex-1 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition capitalize ${
                   role === r
                     ? "bg-white dark:bg-gray-700 shadow-md text-teal-600 dark:text-teal-400"
                     : "text-gray-600 dark:text-gray-400"

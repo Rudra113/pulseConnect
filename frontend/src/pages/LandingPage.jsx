@@ -63,96 +63,96 @@ const LandingPage = ({ onLoginClick }) => {
 
       {/* Hero Section - Elder-friendly with large text */}
       <section className="relative overflow-hidden bg-gradient-to-br from-teal-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-teal-100 dark:bg-teal-900/30 rounded-full blur-3xl opacity-40 -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-100 dark:bg-blue-900/30 rounded-full blur-3xl opacity-40 translate-y-1/2 -translate-x-1/2"></div>
+        {/* Decorative elements - hidden on mobile for cleaner look */}
+        <div className="hidden sm:block absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-teal-100 dark:bg-teal-900/30 rounded-full blur-3xl opacity-40 -translate-y-1/2 translate-x-1/2"></div>
+        <div className="hidden sm:block absolute bottom-0 left-0 w-48 sm:w-80 h-48 sm:h-80 bg-blue-100 dark:bg-blue-900/30 rounded-full blur-3xl opacity-40 translate-y-1/2 -translate-x-1/2"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 md:py-24 lg:py-32 relative">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center space-x-2 bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300 px-4 py-2 rounded-full text-base font-medium mb-6">
                 <Activity className="w-5 h-5" />
                 <span>Trusted by 50,000+ patients</span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 leading-tight tracking-tight">
                 Your Health,
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">
                   {" "}
                   Simplified
                 </span>
               </h1>
-              <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-6 sm:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Connect with certified doctors instantly, track your medications
                 easily, and manage your health — all from the comfort of your
                 home.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                 <button
                   onClick={onLoginClick}
-                  className="group bg-gradient-to-r from-teal-600 to-teal-700 text-white px-10 py-5 rounded-2xl hover:from-teal-700 hover:to-teal-800 transition-all duration-300 text-xl font-semibold flex items-center justify-center shadow-xl shadow-teal-500/30 hover:shadow-2xl hover:shadow-teal-500/40 hover:-translate-y-1"
+                  className="group bg-gradient-to-r from-teal-600 to-teal-700 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl hover:from-teal-700 hover:to-teal-800 transition-all duration-300 text-lg sm:text-xl font-semibold flex items-center justify-center shadow-xl shadow-teal-500/30 hover:shadow-2xl hover:shadow-teal-500/40 hover:-translate-y-1"
                 >
                   Get Started Free
-                  <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <button className="border-3 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-10 py-5 rounded-2xl hover:border-teal-600 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/30 transition-all duration-300 text-xl font-semibold">
+                <button className="border-2 sm:border-3 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl hover:border-teal-600 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/30 transition-all duration-300 text-lg sm:text-xl font-semibold">
                   Watch Demo
                 </button>
               </div>
               {/* Trust indicators */}
-              <div className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-gray-600 dark:text-gray-400">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-6 h-6 text-green-500" />
-                  <span className="text-lg">Free to Start</span>
+              <div className="mt-6 sm:mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-6 text-gray-600 dark:text-gray-400">
+                <div className="flex items-center space-x-1.5 sm:space-x-2">
+                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500" />
+                  <span className="text-base sm:text-lg">Free to Start</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Shield className="w-6 h-6 text-blue-500" />
-                  <span className="text-lg">HIPAA Secure</span>
+                <div className="flex items-center space-x-1.5 sm:space-x-2">
+                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500" />
+                  <span className="text-base sm:text-lg">HIPAA Secure</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Clock className="w-6 h-6 text-teal-500" />
-                  <span className="text-lg">24/7 Support</span>
+                <div className="flex items-center space-x-1.5 sm:space-x-2">
+                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-teal-500" />
+                  <span className="text-base sm:text-lg">24/7 Support</span>
                 </div>
               </div>
             </div>
 
             {/* Hero Card */}
-            <div className="relative mx-auto lg:mx-0 max-w-md w-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-blue-600 rounded-3xl transform rotate-3 scale-105 opacity-20"></div>
-              <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl border border-gray-100 dark:border-gray-700">
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-lg text-gray-600 dark:text-gray-400 font-medium">
+            <div className="relative mx-auto lg:mx-0 max-w-sm sm:max-w-md w-full mt-8 lg:mt-0">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl sm:rounded-3xl transform rotate-3 scale-105 opacity-20"></div>
+              <div className="relative bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl border border-gray-100 dark:border-gray-700">
+                <div className="flex items-center justify-between mb-4 sm:mb-6">
+                  <span className="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-medium">
                     Upcoming Appointment
                   </span>
-                  <div className="bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-400 px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-400 px-2.5 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
                     Today
                   </div>
                 </div>
-                <div className="flex items-center space-x-5 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-teal-100 to-blue-100 dark:from-teal-900/50 dark:to-blue-900/50 rounded-2xl flex items-center justify-center">
-                    <User className="w-8 h-8 text-teal-600 dark:text-teal-400" />
+                <div className="flex items-center space-x-3 sm:space-x-5 mb-4 sm:mb-6">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-teal-100 to-blue-100 dark:from-teal-900/50 dark:to-blue-900/50 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <User className="w-6 h-6 sm:w-8 sm:h-8 text-teal-600 dark:text-teal-400" />
                   </div>
-                  <div>
-                    <p className="text-xl font-bold text-gray-900 dark:text-white">
+                  <div className="min-w-0">
+                    <p className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white truncate">
                       Dr. Sarah Williams
                     </p>
-                    <p className="text-lg text-gray-600 dark:text-gray-400">
+                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400">
                       Cardiologist
                     </p>
                   </div>
                 </div>
-                <div className="bg-gray-50 dark:bg-gray-700/50 rounded-2xl p-5 mb-6">
+                <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl sm:rounded-2xl p-3 sm:p-5 mb-4 sm:mb-6">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3 text-gray-700 dark:text-gray-300">
-                      <Calendar className="w-6 h-6 text-teal-600 dark:text-teal-400" />
-                      <span className="text-lg font-medium">
+                    <div className="flex items-center space-x-2 sm:space-x-3 text-gray-700 dark:text-gray-300">
+                      <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-teal-600 dark:text-teal-400 flex-shrink-0" />
+                      <span className="text-base sm:text-lg font-medium">
                         Today, 2:00 PM
                       </span>
                     </div>
-                    <MessageSquare className="w-6 h-6 text-teal-600 dark:text-teal-400" />
+                    <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 text-teal-600 dark:text-teal-400 flex-shrink-0" />
                   </div>
                 </div>
-                <button className="w-full bg-gradient-to-r from-teal-600 to-teal-700 text-white py-4 rounded-xl text-lg font-semibold hover:from-teal-700 hover:to-teal-800 transition-all flex items-center justify-center space-x-2">
-                  <MessageSquare className="w-5 h-5" />
+                <button className="w-full bg-gradient-to-r from-teal-600 to-teal-700 text-white py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold hover:from-teal-700 hover:to-teal-800 transition-all flex items-center justify-center space-x-2">
+                  <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span>Chat with our Doctor</span>
                 </button>
               </div>
@@ -164,23 +164,23 @@ const LandingPage = ({ onLoginClick }) => {
       {/* How it Works - Enhanced for clarity */}
       <section
         id="how-it-works"
-        className="py-20 md:py-28 bg-gray-50 dark:bg-gray-800/50"
+        className="py-12 sm:py-20 md:py-28 bg-gray-50 dark:bg-gray-800/50"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="inline-block bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300 px-4 py-2 rounded-full text-lg font-medium mb-4">
+          <div className="text-center mb-10 sm:mb-16">
+            <span className="inline-block bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-base sm:text-lg font-medium mb-3 sm:mb-4">
               Simple Process
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
               Getting Started is Easy
             </h2>
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Quality healthcare in three simple steps — no complicated setup
               required
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-12">
             {[
               {
                 icon: User,
@@ -205,22 +205,22 @@ const LandingPage = ({ onLoginClick }) => {
               },
             ].map((step, idx) => (
               <div key={idx} className="relative group">
-                <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 h-full">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 h-full">
                   {/* Step number */}
                   <div
-                    className={`absolute -top-5 left-8 bg-gradient-to-r ${step.color} text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg`}
+                    className={`absolute -top-4 sm:-top-5 left-6 sm:left-8 bg-gradient-to-r ${step.color} text-white w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center font-bold text-lg sm:text-xl shadow-lg`}
                   >
                     {idx + 1}
                   </div>
                   <div
-                    className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center mb-6 mt-4`}
+                    className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${step.color} rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 mt-3 sm:mt-4`}
                   >
-                    <step.icon className="w-8 h-8 text-white" />
+                    <step.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">
                     {step.title}
                   </h3>
-                  <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -233,17 +233,17 @@ const LandingPage = ({ onLoginClick }) => {
       {/* Features Grid - Larger and clearer */}
       <section
         id="features"
-        className="py-20 md:py-28 bg-white dark:bg-gray-900"
+        className="py-12 sm:py-20 md:py-28 bg-white dark:bg-gray-900"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="inline-block bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full text-lg font-medium mb-4">
+          <div className="text-center mb-10 sm:mb-16">
+            <span className="inline-block bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-base sm:text-lg font-medium mb-3 sm:mb-4">
               Powerful Features
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
               Everything You Need for Better Health
             </h2>
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Comprehensive healthcare tools designed to make managing your
               health simple and stress-free
             </p>
@@ -302,19 +302,19 @@ const LandingPage = ({ onLoginClick }) => {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="group bg-white dark:bg-gray-800 rounded-3xl p-8 border-2 border-gray-100 dark:border-gray-700 hover:border-teal-200 dark:hover:border-teal-700 shadow-sm hover:shadow-xl transition-all duration-300"
+                className="group bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-5 sm:p-8 border-2 border-gray-100 dark:border-gray-700 hover:border-teal-200 dark:hover:border-teal-700 shadow-sm hover:shadow-xl transition-all duration-300"
               >
                 <div
-                  className={`w-16 h-16 ${feature.lightColor} dark:opacity-80 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-12 h-12 sm:w-16 sm:h-16 ${feature.lightColor} dark:opacity-80 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <feature.icon
-                    className={`w-8 h-8 ${feature.color.replace("bg-", "text-")}`}
+                    className={`w-6 h-6 sm:w-8 sm:h-8 ${feature.color.replace("bg-", "text-")}`}
                   />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -330,29 +330,29 @@ const LandingPage = ({ onLoginClick }) => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <span className="inline-block bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300 px-4 py-2 rounded-full text-lg font-medium mb-4">
+          <div className="text-center mb-10 sm:mb-16">
+            <span className="inline-block bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-base sm:text-lg font-medium mb-3 sm:mb-4">
               About PulseConnect
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
               Healthcare Made Human
             </h2>
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               We believe everyone deserves easy access to quality healthcare,
               regardless of age or technical ability
             </p>
           </div>
 
           {/* Mission & Vision Cards */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-10 shadow-lg border border-gray-100 dark:border-gray-700">
-              <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6">
-                <Activity className="w-8 h-8 text-white" />
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-10 sm:mb-16">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg border border-gray-100 dark:border-gray-700">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
+                <Activity className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                 Our Mission
               </h3>
-              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
                 To make healthcare accessible, affordable, and easy to
                 understand for everyone. We're committed to breaking down
                 barriers that prevent people from getting the care they need,
@@ -360,14 +360,14 @@ const LandingPage = ({ onLoginClick }) => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-10 shadow-lg border border-gray-100 dark:border-gray-700">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
+            <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg border border-gray-100 dark:border-gray-700">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
+                <TrendingUp className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                 Our Vision
               </h3>
-              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
                 A world where quality healthcare is just a tap away. We envision
                 a future where managing your health is as simple as checking
                 your email — intuitive, reliable, and always there when you need
@@ -377,11 +377,11 @@ const LandingPage = ({ onLoginClick }) => {
           </div>
 
           {/* Our Values */}
-          <div className="bg-gradient-to-r from-teal-600 to-blue-600 rounded-3xl p-8 lg:p-12 mb-16">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center">
+          <div className="bg-gradient-to-r from-teal-600 to-blue-600 rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12 mb-10 sm:mb-16">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 sm:mb-8 text-center">
               Our Core Values
             </h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {[
                 {
                   title: "Patient First",
@@ -401,13 +401,15 @@ const LandingPage = ({ onLoginClick }) => {
                 },
               ].map((value, idx) => (
                 <div key={idx} className="text-center">
-                  <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-7 h-7 text-white" />
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 bg-white/20 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-4">
+                    <CheckCircle className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-2">
+                  <h4 className="text-base sm:text-xl font-bold text-white mb-1 sm:mb-2">
                     {value.title}
                   </h4>
-                  <p className="text-teal-100 text-lg">{value.desc}</p>
+                  <p className="text-teal-100 text-sm sm:text-lg">
+                    {value.desc}
+                  </p>
                 </div>
               ))}
             </div>
@@ -513,32 +515,32 @@ const LandingPage = ({ onLoginClick }) => {
       {/* AI Symptom Checker Section */}
       <section
         id="symptom-checker"
-        className="py-20 md:py-28 bg-gradient-to-br from-purple-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
+        className="py-12 sm:py-20 md:py-28 bg-gradient-to-br from-purple-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-block bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 px-4 py-2 rounded-full text-lg font-medium mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <span className="inline-block bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-base sm:text-lg font-medium mb-3 sm:mb-4">
               🩺 Try This Feature
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
               AI Symptom Checker
             </h2>
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
               Experience our AI-powered symptom analysis. Describe how you feel
               and get instant health insights — no account needed!
             </p>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl border border-gray-100 dark:border-gray-700">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center">
-                <Activity className="w-6 h-6 text-white" />
+          <div className="bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-2xl border border-gray-100 dark:border-gray-700">
+            <div className="flex items-start sm:items-center space-x-3 mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+              <div className="min-w-0">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
                   Describe Your Symptoms
                 </h3>
-                <span className="text-sm bg-gradient-to-r from-purple-100 to-indigo-100 dark:from-purple-900/50 dark:to-indigo-900/50 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded-full font-medium">
+                <span className="text-xs sm:text-sm bg-gradient-to-r from-purple-100 to-indigo-100 dark:from-purple-900/50 dark:to-indigo-900/50 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded-full font-medium">
                   Powered by Google Gemini AI
                 </span>
               </div>
@@ -549,19 +551,19 @@ const LandingPage = ({ onLoginClick }) => {
                 value={symptomText}
                 onChange={(e) => setSymptomText(e.target.value)}
                 placeholder="Example: I've been experiencing severe headaches for the past 3 days, along with a mild fever around 100°F. The headache is worse in the morning and I also feel nauseous."
-                className="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none text-lg"
+                className="w-full h-32 sm:h-40 px-3 sm:px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none text-base sm:text-lg"
               />
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
                   onClick={handleAnalyzeSymptoms}
                   disabled={analyzing || !symptomText.trim()}
-                  className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 px-6 rounded-xl hover:from-purple-700 hover:to-indigo-700 transition font-semibold flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed shadow-lg text-lg"
+                  className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 sm:py-4 px-4 sm:px-6 rounded-xl hover:from-purple-700 hover:to-indigo-700 transition font-semibold flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed shadow-lg text-base sm:text-lg"
                 >
                   {analyzing ? (
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                      <span>Analyzing with AI...</span>
+                      <span>Analyzing...</span>
                     </>
                   ) : (
                     <>
