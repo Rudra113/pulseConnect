@@ -8,12 +8,9 @@ import {
   Calendar,
   Pill,
   Activity,
-  Clock,
-  ChevronRight,
   TrendingUp,
   AlertCircle,
   MessageSquare,
-  User,
   Stethoscope,
   Send,
   Plus,
@@ -22,7 +19,6 @@ import {
   Check,
   X,
   RefreshCw,
-  Bell,
   FileText,
 } from "lucide-react";
 import DashboardHeader from "../components/common/DashboardHeader";
@@ -58,7 +54,7 @@ const PatientDashboard = ({ user, onLogout }) => {
   const previousMessageCount = useRef(0);
 
   // Notification state
-  const [notification, setNotification] = useState(null);
+  const [, setNotification] = useState(null);
   const [lastRefresh, setLastRefresh] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -96,11 +92,7 @@ const PatientDashboard = ({ user, onLogout }) => {
   const contentRef = useRef(null); // Ref for tab content container
   const addMedFormRef = useRef(null); // Ref for add medication form
 
-  const sectionRefs = {
-    consult: consultRef,
-    symptoms: symptomsRef,
-    medications: medicationsRef,
-  };
+  // Note: sectionRefs removed - refs are used directly where needed
 
   // Handle tab click with smooth scroll
   const handleTabClick = (tab) => {
@@ -143,6 +135,7 @@ const PatientDashboard = ({ user, onLogout }) => {
       fetchDataSilent();
     }, 15000);
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Auto-refresh messages when in chat view

@@ -12,9 +12,6 @@ import {
   Plus,
   MessageSquare,
   RefreshCw,
-  Bell,
-  X,
-  CheckCircle,
   PhoneOff,
   Activity,
 } from "lucide-react";
@@ -48,7 +45,7 @@ const DoctorDashboard = ({ user, onLogout }) => {
   const previousMessageCount = useRef(0);
 
   // Notification state
-  const [notification, setNotification] = useState(null);
+  const [, setNotification] = useState(null);
   const [lastRefresh, setLastRefresh] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -90,6 +87,7 @@ const DoctorDashboard = ({ user, onLogout }) => {
       fetchDataSilent();
     }, 10000);
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isApproved, patientQueue, chats]);
 
   // Auto-refresh messages when in chat view
