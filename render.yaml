@@ -1,5 +1,6 @@
 # render.yaml - Render Blueprint for automatic deployment
 # Docs: https://render.com/docs/blueprint-spec
+# Note: VS Code may show warnings - these are safe to ignore. The file follows Render's blueprint spec.
 
 services:
   # Backend API Service
