@@ -143,48 +143,73 @@ const AdminDashboard = ({ user, onLogout }) => {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Header */}
       <header className="bg-white dark:bg-gray-800 shadow-sm dark:shadow-gray-900/30 border-b border-gray-200 dark:border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center">
-              <Shield className="w-6 h-6 text-white" />
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
+          {/* Mobile: Stack layout */}
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center">
+                  <Shield className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+                    Admin Dashboard
+                  </h1>
+                  <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 hidden sm:block">
+                    Manage doctors and users
+                  </p>
+                </div>
+              </div>
+              {/* Mobile: Show theme and logout on same row */}
+              <div className="flex items-center space-x-2 sm:hidden">
+                <button
+                  onClick={toggleTheme}
+                  className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition"
+                >
+                  {isDarkMode ? (
+                    <Sun className="w-4 h-4 text-yellow-500" />
+                  ) : (
+                    <Moon className="w-4 h-4 text-gray-600" />
+                  )}
+                </button>
+                <button
+                  onClick={onLogout}
+                  className="p-2 text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition"
+                >
+                  <LogOut className="w-4 h-4" />
+                </button>
+              </div>
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-                Admin Dashboard
-              </h1>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Manage doctors and users
-              </p>
+            {/* Desktop: Show full controls */}
+            <div className="hidden sm:flex items-center space-x-4">
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition"
+                title={
+                  isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"
+                }
+              >
+                {isDarkMode ? (
+                  <Sun className="w-5 h-5 text-yellow-500" />
+                ) : (
+                  <Moon className="w-5 h-5 text-gray-600" />
+                )}
+              </button>
+              <div className="text-right">
+                <p className="text-sm font-medium text-gray-900 dark:text-white">
+                  {user?.name}
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  Administrator
+                </p>
+              </div>
+              <button
+                onClick={onLogout}
+                className="p-2 text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition"
+              >
+                <LogOut className="w-5 h-5" />
+              </button>
             </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition"
-              title={
-                isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"
-              }
-            >
-              {isDarkMode ? (
-                <Sun className="w-5 h-5 text-yellow-500" />
-              ) : (
-                <Moon className="w-5 h-5 text-gray-600" />
-              )}
-            </button>
-            <div className="text-right">
-              <p className="text-sm font-medium text-gray-900 dark:text-white">
-                {user?.name}
-              </p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                Administrator
-              </p>
-            </div>
-            <button
-              onClick={onLogout}
-              className="p-2 text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition"
-            >
-              <LogOut className="w-5 h-5" />
-            </button>
           </div>
         </div>
       </header>

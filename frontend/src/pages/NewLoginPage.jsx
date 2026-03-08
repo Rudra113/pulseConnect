@@ -89,11 +89,11 @@ function LoginPage({ onLogin, onSwitchToRegister }) {
       </div>
 
       {/* Right Side - Login Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-4 sm:p-8 bg-white dark:bg-gray-900 transition-colors duration-300 relative min-h-screen lg:min-h-0">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-4 sm:p-6 md:p-8 bg-white dark:bg-gray-900 transition-colors duration-300 relative">
         {/* Dark Mode Toggle */}
         <button
           onClick={toggleTheme}
-          className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2.5 sm:p-3 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2.5 sm:p-3 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors z-10"
           aria-label={
             isDarkMode ? "Switch to light mode" : "Switch to dark mode"
           }
@@ -105,18 +105,18 @@ function LoginPage({ onLogin, onSwitchToRegister }) {
           )}
         </button>
 
-        <div className="w-full max-w-md">
-          <div className="lg:hidden flex items-center justify-center space-x-2 mb-8">
-            <Activity className="w-8 h-8 text-teal-600 dark:text-teal-400" />
-            <span className="text-2xl font-bold text-gray-900 dark:text-white">
+        <div className="w-full max-w-md mx-auto">
+          <div className="lg:hidden flex items-center justify-center space-x-2 mb-6 sm:mb-8">
+            <Activity className="w-7 h-7 sm:w-8 sm:h-8 text-teal-600 dark:text-teal-400" />
+            <span className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
               PulseConnect
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2 text-center lg:text-left">
             Sign In
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
+          <p className="text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 text-center lg:text-left">
             Choose your role to continue
           </p>
 
